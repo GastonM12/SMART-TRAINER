@@ -1,4 +1,8 @@
-export type TrainingLevelType = 'BEGINNER' | 'intermediate' | 'advanced' | 'expert';
+export type TrainingLevelType =
+  | 'BEGINNER'
+  | 'INTERMEDIATE'
+  | 'ADVANCED'
+  | 'EXPERT';
 
 export class TrainingLevel {
   public readonly value: TrainingLevelType;
@@ -6,17 +10,20 @@ export class TrainingLevel {
   private constructor(value: TrainingLevelType) {
     this.value = value;
   }
-    static beginner() {
-        return new TrainingLevel('BEGINNER');
-    }
-     static intermediate() {
-        return new TrainingLevel('intermediate');
-    }
-    static advanced() {
-        return new TrainingLevel('advanced');
-    }
-    static expert() {
-        return new TrainingLevel('expert');
-    }
 
+  static beginner() {
+    return new TrainingLevel('BEGINNER');
+  }
+
+  static intermediate() {
+    return new TrainingLevel('INTERMEDIATE');
+  }
+
+  static advanced() {
+    return new TrainingLevel('ADVANCED');
+  }
+
+  static expert() {
+    return new TrainingLevel('EXPERT');
+  }
 }

@@ -10,9 +10,14 @@ export class TrainingPlan {
     week: number,
     description: string
   ) {
+    if (week < 1 || week > 52) {
+      throw new Error('Week must be between 1 and 52');
+    }
+
     this.id = id;
     this.userId = userId;
     this.week = week;
     this.description = description;
   }
 }
+
